@@ -1,0 +1,19 @@
+@media (max-width: 620px) {
+  .top {
+    padding: 3rem 0;
+  }
+
+  .personagens-slider{
+    padding: 0 1.5rem;
+    gap: .8rem;
+  }
+
+  .btn-seta{
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .lista-personagens{
+    height: 48rem;
+  }
+}
