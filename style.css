@@ -1,0 +1,159 @@
+/*global*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --font-color: #f1ecff;
+  --hv-btn: #8351fe;
+  --name-card: rgba(179, 177, 185, 0.7);
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: 'Outfit', sans-serif;
+  background-image: url('./assets/fundo-base.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+/**/
+
+/*header*/
+.top{
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.top h1{
+  color: var(--font-color);
+  font-size: 4.5rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+/**/
+
+/*main*/
+.personagens-slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+/*ul*/
+.lista-personagens{
+  width: 33rem;
+  height: 52rem;
+  position: relative;
+}
+
+.btn-seta{
+  background-color: #fff;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color .3s ease-in-out;
+
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.btn-seta.btn-voltar{
+  transform: rotateY(180deg);
+}
+
+.btn-seta:hover{
+  background-color: var(--hv-btn);
+}
+
+/*cartao*/
+.cartao{
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  padding: 1.2rem;
+  border-radius: 1.6rem;
+  transition: opacity .3s ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cartao.selecionado{
+  opacity: 1;
+  z-index: 1;
+}
+
+.cartao .imagem-personagem{
+  width: 100%;
+  max-height: 28rem;
+}
+
+.cartao .nome{
+  background-color: var(--name-card);
+  padding: .8rem 1.6rem;
+  margin-bottom: .8rem;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+
+.cartao .descricao{
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+}
+
+.cartao .descricao .titulo{
+  background-color: #333;
+  font-size: 2rem;
+  color: #fff;
+  padding: 1.2rem;
+}
+
+.cartao .descricao .texto{
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  text-align: justify;
+  max-height: 11rem;
+  overflow-y: auto;
+}
+
+.cartao.fundo-1{
+  background: url(./assets/fundo-1.jpg) no-repeat;
+}
+.cartao.fundo-2{
+  background: url(./assets/fundo-2.jpg) no-repeat;
+}
+.cartao.fundo-3{
+  background: url(./assets/fundo-3.jpg) no-repeat;
+}
+.cartao.fundo-4{
+  background: url(./assets/fundo-4.jpg) no-repeat;
+}
+.cartao.fundo-5{
+  background: url(./assets/fundo-5.jpg) no-repeat;
+}
+.cartao.fundo-6{
+  background: url(./assets/fundo-6.jpg) no-repeat;
+}
