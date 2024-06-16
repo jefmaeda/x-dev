@@ -5,7 +5,17 @@ const btnAvancar = document.getElementById("btn-avancar")
 btnAvancar.addEventListener("click", function () {
   // 3 passo - fazer aparecer o proximo cartao da lista
   const cartoes = document.querySelectorAll(".cartao")
+  cartoes[1].classList.add("selecionado")
 
-  console.log(cartoes)
+})
+
+//1. identificar (btn-voltar)
+const btnVoltar = document.getElementById("btn-voltar")
+//2. identificar o clique
+btnVoltar.addEventListener("click",function(){
+  //3. voltar para o cartao anterior
+  const cartoes = document.querySelectorAll(".cartao")
+
+  cartoes[1].classList.remove("selecionado")
 
 })
